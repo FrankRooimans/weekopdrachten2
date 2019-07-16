@@ -1,0 +1,67 @@
+<script>
+
+    var array = ["Roos", "Tulp", "Margriet", "Lelie", "Aster", "Klaproos", "Anjer", "Gerbera", "Pioen", "Viool"];
+
+    function bloemen() {
+
+        var random = array[Math.floor(Math.random() * array.length)]; 
+
+        var antwoord = random.charAt(0);
+
+        document.getElementById("deTekst").innerHTML = "Het woord is" + " " + random + " " + "en begint met een" + " " + antwoord + ".";
+
+    }
+
+
+//var letter = array[something].charAt( array[something].length -1)
+</script>
+
+<style>
+
+    #rondje {
+
+        width: 600px;
+        height: 600px;
+        border: 2px solid black;
+        border-radius: 500px;
+        position: absolute;
+        left: 450px;
+        top: 50px;
+        background-image: url("flowers.jpg");  
+
+    }
+
+    #knop {
+
+        position: absolute;
+        left: 260px;
+        top: 100px;
+
+    }
+
+    #deTekst {
+
+        position: absolute;
+        left: 80px;
+        top: 200px;
+        color: white;
+        font-size: 25px;
+    }
+
+    body {
+
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+
+</style>
+
+<body>
+
+<div id="rondje">
+
+        <input type="button" id="knop" onclick=bloemen() value="Flower power">
+        <div id="deTekst"></div>
+</div>
+
+</body>

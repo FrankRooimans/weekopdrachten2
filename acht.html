@@ -1,0 +1,178 @@
+<script>
+
+    var tarfief = 2;
+
+    function play(){
+       var audio = document.getElementById("audio");
+       audio.play();
+    }
+             
+
+    function berekenKosten() {
+
+        var uren = parseInt(document.getElementById("veld").value);
+
+        var betalen = uren.toFixed(1) * tarfief.toFixed(1);
+
+       document.getElementById("bedrag").innerHTML = betalen;
+    }
+
+    function een() {
+
+        var waarde = parseFloat(document.getElementById("bedrag").innerHTML); //ophalen
+        var nieuweWaarde = waarde.toFixed(1) - parseFloat("2.0").toFixed(1); // toevoegen
+        document.getElementById("bedrag").innerHTML = nieuweWaarde; // laten zien
+        play();
+   
+    }
+
+    function twee(){
+
+        var waarde = parseFloat(document.getElementById("bedrag").innerHTML); //ophalen
+        var nieuweWaarde = waarde.toFixed(1) - parseFloat("1.0").toFixed(1); // toevoegen
+        document.getElementById("bedrag").innerHTML = nieuweWaarde; // laten zien
+        audio.play();
+    }
+
+    function drie(){
+
+        var waarde = parseFloat(document.getElementById("bedrag").innerHTML); //ophalen
+        var nieuweWaarde = waarde.toFixed(1) - parseFloat("0.50").toFixed(1); // toevoegen
+        document.getElementById("bedrag").innerHTML = nieuweWaarde; // laten zien
+        audio.play();
+    }
+
+
+    function vier(){
+
+        var waarde = parseFloat(document.getElementById("bedrag").innerHTML); //ophalen
+        var nieuweWaarde = waarde.toFixed(1) - parseFloat("0.20").toFixed(1); // toevoegen
+        document.getElementById("bedrag").innerHTML = nieuweWaarde; // laten zien
+        audio.play();
+    }
+
+    function vijf(){
+
+        var waarde = parseFloat(document.getElementById("bedrag").innerHTML); //ophalen
+        var nieuweWaarde = waarde.toFixed(1) - parseFloat("0.10").toFixed(1); // toevoegen
+        document.getElementById("bedrag").innerHTML = nieuweWaarde; // laten zien
+        audio.play();
+    }
+   
+</script>
+
+<style>
+
+    body {
+
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    #automaat {
+
+        background-color:dodgerblue;
+        width: 500px;
+        height: 240px;
+        position: absolute;
+        left: 400px;
+        top: 50px;
+        border: 2px solid black
+    }
+
+    p {
+        font-size: 25px;
+        margin-left: 55px;
+    }
+
+    #veld {
+
+        margin-left: 140px;
+    }
+
+    #bedrag {
+
+        margin-left: 225px;
+        margin-top: 50px;
+        font-size: 40px;
+    }
+
+    #euro {
+
+        position: absolute;
+        margin-left: 195px;
+        margin-top: 50px;
+        font-size: 40px;
+        margin-right: 0px;
+    }
+
+    #beschrijving {
+        position: absolute;
+        margin-left: 140px;
+        margin-top: 10px;
+    }
+
+    #verzameling {
+
+        position: absolute;
+        top: 350px;
+        left: 420px;
+    }
+
+    .knoppen {
+
+        border: 2px solid black;
+        border-radius: 100px;
+        width: 70px;
+        height: 70;
+        margin: 10px;
+        background-color: gold;
+    }
+
+
+
+
+</style>
+
+<body>
+
+<div id="automaat">
+
+<p>Hoe veel uur heb je geparkeerd?</p>
+<input type="text" id="veld">
+<input type="button" value="knop" onclick="berekenKosten()">
+
+
+
+<br>
+<br>
+
+<div id="beschrijving">Het te betalen bedrag is:</div>
+<div id="euro">&#8364</div>
+<div id="bedrag"></div>
+
+</div>
+
+<div id="verzameling">
+
+<input type="button" class="knoppen" value="&#8364 2" onclick="een()">
+
+<input type="button" class="knoppen" value="&#8364 1" onclick="twee()">
+
+<input type="button" class="knoppen" value="&#8364 0,50" onclick="drie()">
+
+<input type="button" class="knoppen" value="&#8364 0,20" onclick="vier()">
+
+<input type="button" class="knoppen" value="&#8364 0,10" onclick="vijf()">
+
+<audio id="audio" src="coin.mp3"></audio>
+
+</div>
+
+</body>
+
+
+
+
+
+
+

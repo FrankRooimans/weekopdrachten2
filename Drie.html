@@ -1,0 +1,133 @@
+<script> 
+
+    var goedeAntwoorden = 0;
+
+    function controleer() {
+
+        if(document.getElementById("vier").checked) {
+
+            goedeAntwoorden += 1;
+
+        }
+
+         if(document.getElementById("zes").checked) {
+
+            goedeAntwoorden += 1;
+
+        }
+
+        if(document.getElementById("elf").checked) {
+
+            goedeAntwoorden += 1;
+
+        }
+
+        if(document.getElementById("dertien").checked) {
+
+            goedeAntwoorden += 1;
+
+        }
+
+        if(goedeAntwoorden == 1) {
+
+            alert("Je hebt een antwoord goed. Je score is 25%");
+        }
+
+        if(goedeAntwoorden == 2) {
+
+            alert("Je hebt twee antwoorden goed. Je score is 50%");
+        }
+
+        if(goedeAntwoorden == 3) {
+
+            alert("Je hebt drie antwoorden goed. Je score is 75%");
+        }
+
+        if(goedeAntwoorden == 4) {
+
+            alert("Je hebt alle antwoorden goed. Je score is 100%. Geweldig gedaan!");
+
+            document.getElementById("foto").style.visibility = "visible";
+        }       
+    
+
+
+    }
+
+
+</script>
+
+<style>
+
+    #score {
+
+        position: absolute;
+        left: 600px;
+        top: 200px;
+
+    }
+
+    #foto {
+
+        width: 200px;
+        height: 220px;
+        visibility: hidden;
+    }
+
+</style>
+
+<h3>Wie is de huidige president van de VS?</h3>
+
+<input type="checkbox" value="Obama" id="een">Barack Obama
+<br>
+<input type="checkbox" value="Mark Rutte" id="twee">Mark Rutte
+<br>
+<input type="checkbox" value="Melania Trump" id="drie">Melania Trump
+<br>
+<input type="checkbox" value="Donald Trump" id="vier">Donald Trump
+
+<br>
+
+<h3>Welke kleur heeft gras?</h3>
+
+<input type="checkbox" value="Paars" id="vijf">Paars
+<br>
+<input type="checkbox" value="Groen" id="zes">Groen
+<br>
+<input type="checkbox" value="Geel" id="zeven">Geel
+<br>
+<input type="checkbox" value="Goud" id="acht">Goud
+
+<br>
+
+<h3>Hoeveel is 1 + 1?</h3>
+
+<input type="checkbox" value="Vijf" id="negen">5
+<br>
+<input type="checkbox" value="Negentien" id="tien">19
+<br>
+<input type="checkbox" value="Elf" id="elf">2
+<br>
+<input type="checkbox" value="Twaalf" id="twaalf">3
+
+<br>
+
+<h3>Is de lucht blauw?</h3>
+
+<input type="checkbox" value="Ja" id="dertien">Ja
+<br>
+<input type="checkbox" value="Nee" id="viertien">Nee
+<br>
+<input type="checkbox" value="Soms" id="vijftien">Soms
+<br>
+<input type="checkbox" value="Ligt eraan" id="zestien">Ligt eraan
+
+<br>
+<br>
+
+<input type="button" id="knop" value="Controleer" onclick="controleer()">
+
+<div id="score"><img src="a-winner.jpg" id="foto"></div>
+
+
+

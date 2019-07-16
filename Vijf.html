@@ -1,0 +1,24 @@
+<script>
+
+    function zoeken(){
+
+        var word = document.getElementById("woord").value;
+        
+        var karakter = document.getElementById("letter").value;
+
+        var count = word.split(karakter).length-1;
+        var result = karakter + " " + "komt" + " " +  count + " " + 'keer voor in dit woord';
+
+        alert(result);
+
+       
+        
+    }
+
+
+</script>
+
+
+<input type="text" id="woord">
+<input type="text" id="letter">
+<input type="button" id="knop" value="Antwoord" onclick="zoeken()">

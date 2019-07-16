@@ -1,0 +1,156 @@
+<script>
+
+    function holland() {
+
+        document.getElementById("eerste").style.backgroundColor = "red";
+        document.getElementById("tweede").style.backgroundColor = "white";
+        document.getElementById("derde").style.backgroundColor = "blue";
+        document.getElementById("tekst").innerHTML = "Hup Holland Hup!"
+
+    }   
+
+    function deutschland() {
+
+        document.getElementById("eerste").style.backgroundColor = "black";
+        document.getElementById("tweede").style.backgroundColor = "red";
+        document.getElementById("derde").style.backgroundColor = "gold";
+        document.getElementById("tekst").innerHTML = "Doei Duitsland"
+
+    }     
+
+    function hungary() {
+
+        document.getElementById("eerste").style.backgroundColor = "red";
+        document.getElementById("tweede").style.backgroundColor = "white";
+        document.getElementById("derde").style.backgroundColor = "green";
+        document.getElementById("tekst").innerHTML = "Hoi Hongarije"
+
+    }
+
+    function austria() {
+
+    document.getElementById("eerste").style.backgroundColor = "red";
+    document.getElementById("tweede").style.backgroundColor = "white";
+    document.getElementById("derde").style.backgroundColor = "red";
+    document.getElementById("tekst").innerHTML = "Hola Oostenrijk"
+
+}
+
+function bulgaria() {
+
+document.getElementById("eerste").style.backgroundColor = "grey"
+document.getElementById("tweede").style.backgroundColor = "green";
+document.getElementById("derde").style.backgroundColor = "red";
+document.getElementById("tekst").innerHTML = "Bah Bulgarije"
+
+}
+
+function random() {
+
+    var myArray = ["red", "green", "gold", "blue", "pink", "white", "purple"];
+
+    var rand = myArray[Math.floor(Math.random() * myArray.length)];
+    var rand2 = myArray[Math.floor(Math.random() * myArray.length)]; 
+    var rand3 = myArray[Math.floor(Math.random() * myArray.length)]; 
+    document.getElementById("tekst").innerHTML = "Verzin een leuke naam voor het land waar deze vlag bij hoort"
+
+    document.getElementById("eerste").style.backgroundColor = rand;
+    document.getElementById("tweede").style.backgroundColor = rand2;
+    document.getElementById("derde").style.backgroundColor = rand3;    
+
+}
+
+function shaken() {
+
+    var landen = ["Nederland", "Duitsland", "Hongarije", "Oostenrijk", "Bulgarije"];
+
+    var randOm = landen[Math.floor(Math.random() * landen.length)]; 
+
+    if (randOm == "Nederland") {
+
+       holland();
+    }
+
+    if (randOm == "Duitsland") {
+
+        deutschland();
+    }
+
+    if (randOm == "Hongarije") {
+
+        hungary();
+    }
+
+    if (randOm == "Oostenrijk") {
+
+        austria();
+    }
+
+    if (randOm == "Bulgarije") {
+
+        bulgaria();
+    }
+
+
+
+
+}
+
+
+    
+
+
+</script>
+
+<style>
+
+    #eerste {
+
+        width: 500px;
+        height: 100px;
+        border: 2px;
+        border-style: solid;
+    }
+
+    #tweede {
+
+        width: 500px;
+        height: 100px;
+        border: 2px;
+        border-style: solid;
+        border-top: 0px; 
+    }
+
+    #derde {
+
+    width: 500px;
+    height: 100px;
+    border: 2px;
+    border-style: solid;
+    border-top: 0px; 
+
+    }
+
+</style>
+
+<div>
+    <div id="eerste"></div>
+    <div id="tweede"></div>
+    <div id="derde"></div>
+</div>
+
+<br>
+<br>
+
+<div id="tekst"></div>
+
+<br>
+<br>
+
+<input type="button" value="Nederland" onclick="holland()">
+<input type="button" value="Duitsland" onclick="deutschland()">
+<input type="button" value="Hongarije" onclick="hungary()">
+<input type="button" value="Oostenrijk" onclick="austria()">
+<input type="button" value="Bulgarije" onclick="bulgaria()">
+<input type="button" value="Random vlag" onclick="random()">
+<input type="button" value="Random vlag van een van de 5 opties" onclick="shaken()">
